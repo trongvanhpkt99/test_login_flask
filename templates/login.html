@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ui/css/style.css') }}">
+    <!-- <link rel="stylesheet" href="../static/ui/css/style.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='ui/bower_components/font-awesome/css/font-awesome.min.css') }}">
+    <title>Sign in</title>
+</head>
+
+<body background="">
+    <div class="main">
+        <p class="sign" align="center">Đăng nhập</p>
+        <form class="form1" action="/login" method="POST">
+            {% if wrongpass %}
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> Sai mật khẩu
+            </div>
+            {%endif %}
+
+            <input class="un" type="text" name="username" placeholder="tài khoản">
+            <input class="pass" type="password" name="password" align="center" placeholder="mật khẩu">
+            <button name="submit_button" type="submit" class="login" value="login">Đăng nhập</button>
+            <button name="submit_button" type="submit" class="signup" value="signup">Đăng ký </button>
+            <p class="forgot" align="center"><a href="#">Quên mật khẩu?</p>
+            
+                
+    </div>
+     
+</body>
+
+</html>

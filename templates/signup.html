@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ui/css/style.css') }}">
+    <!-- <link rel="stylesheet" href="../static/ui/css/style.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='ui/bower_components/font-awesome/css/font-awesome.min.css') }}">
+    <title>Sign in</title>
+</head>
+
+<body background="">
+    <div class="main">
+        <p class="sign" align="center">Đăng ký</p>
+        <form class="form1" action="/signup" method="POST">
+            <input class="un" type="text" name="username" placeholder="tài khoản">
+
+            <input class="pass" type="password" name="password" align="center" placeholder="mật khẩu">
+            <input class="pass" type="password" name="confirm_password" align="center" placeholder="nhập lại mật khẩu">
+            <button type="submit" class="signup">Đăng ký</button>
+            <p class="forgot" align="center"><a href="#">đã có tài khoản? Quay lại trang đăng nhập</p>
+            
+                
+    </div>
+     
+</body>
+
+</html>
